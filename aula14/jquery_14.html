@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <p>CFB Cursos</p>
+    <h3>CFB Cursos</h3>
+
+    <p>Curso de canvas</p>
+    <h3>Curso de canvas</h3>
+
+    <p>youtube.com/cfbcursos</p>
+    <h3>youtube.com/cfbcursos</h3>
+
+    <p>www.cfbcursos.com.br</p>
+    <h3>www.cfbcursos.com.br</h3>
+
+    <p>Filtrando elementos</p>
+    <h3>Filtrando elementos</h3>
+
+    <script>
+        $('p').first().css({'border':'1px solid #f00', 'backgroundColor':'#ffa'})
+        $('p').eq(1).css({'border':'1px solid #f00', 'backgroundColor':'#aaf'})
+        $('p').last().css({'border':'1px solid #f00', 'backgroundColor':'#afa'})
+    </script>
+</body>
+</html>
