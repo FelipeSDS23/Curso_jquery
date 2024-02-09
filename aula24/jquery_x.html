@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
+        .menu{
+            background-color: #ddd;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .itemMenu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #128;
+            color: #fff;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu" id="menu">
+        <div class="itemMenu">home</div>
+        <div class="itemMenu">jquery</div>
+        <div class="itemMenu">canvas</div>
+        <div class="itemMenu">python</div>
+        <div class="itemMenu">arduino</div>
+    </div>
+    
+    <script>
+        $('.itemMenu').mouseover(
+            function(){
+                $(this).fadeTo(1000,0.3)
+            }
+        )
+        $('.itemMenu').mouseleave(
+            function(){
+                $(this).fadeTo(200,1)
+            }
+        )
+    </script>
+</body>
+</html>
