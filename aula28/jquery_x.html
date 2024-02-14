@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .menu{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+        }
+        #menus{
+            background-color: #888;
+            display: flex;
+            width: 100%;
+        }
+        .btnMenu{
+            margin: 5px;
+            padding: 5px;
+            cursor: pointer;
+        }
+        #menus{
+            display: flex;
+            width: 100%;
+        }
+        #controle{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #888;
+            padding: 5px;
+            border-radius: 0 0 10px 10px;
+            margin-left: 10px;
+            margin-right: auto;
+        }
+        #controle button{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu" class="menu">
+        <div id="menus">
+            <button class="btnMenu">home</button>
+            <button class="btnMenu">cursos</button>
+            <button class="btnMenu">material</button>
+            <button class="btnMenu">contatos</button>
+            <button class="btnMenu">sobre</button>
+        </div>
+        <div id="controle">
+            <button id="btnCima">Ocultar</button>
+            <button id="btnBaixo">Mostrar</button>
+            <p id="msg">menu exibido</p>
+        </div>
+    </div>
+
+    
+    <script>
+        $('#btnCima').click(function(){
+            $('#menus').slideUp(100,()=>{$('#msg').text('menu oculto')})
+        })
+        $('#btnBaixo').click(function(){
+            $('#menus').slideDown(100,()=>{$('#msg').text('menu exibido')})
+        })
+    </script>
+</body>
+</html>
