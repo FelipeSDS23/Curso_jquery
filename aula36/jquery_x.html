@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .caixa{
+            border: 3px solid #000;
+            border-radius: 10px;
+            padding: 10px 0px 0px 0px;
+            display: flex;
+            width: 100%;
+            height: 100px;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+        }
+        .verde{
+            background-color: #0f0;
+        }
+        .azul{
+            background-color: #00f;
+        }
+        .vermelho{
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <button id="btnVerde">Verde</button>
+        <button id="btnVermelho">Vermelho</button>
+        <button id="btnAzul">Azul</button>
+    </p>
+
+    <div id="caixa" class="caixa">
+
+    </div>
+    
+    <script>
+        $('#btnVerde').click(()=>{
+            $("#caixa").removeClass('azul')
+            $("#caixa").removeClass('vermelho')
+            $("#caixa").addClass('verde')
+        })
+        $('#btnVermelho').click(()=>{
+            $("#caixa").removeClass('verde')
+            $("#caixa").removeClass('azul')
+            $("#caixa").addClass('vermelho')
+        })
+        $('#btnAzul').click(()=>{
+            $("#caixa").removeClass('vermelho')
+            $("#caixa").removeClass('verde')
+            $("#caixa").addClass('azul')
+        })
+    </script>
+</body>
+</html>
